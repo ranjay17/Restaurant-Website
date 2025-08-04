@@ -1,6 +1,7 @@
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import "./Header.css";
+import RestaurantSummary from "./RestaurantSummary";
 
 const Header = () => {
   return (
@@ -9,7 +10,7 @@ const Header = () => {
         <h1 className="heading">ReactMeals</h1>
         <div className="cart-container">
           <button className="cart-button">
-            <FaShoppingCart size={18} style={{color: "black", marginRight: "5px"}} />
+            <FaShoppingCart size={18} style={{marginRight: "5px"}} />
             Your Cart
           </button>
         </div>
@@ -21,6 +22,7 @@ const Header = () => {
           alt="banner"
         />
       </div>
+      <RestaurantSummary />
     </>
   );
 };
