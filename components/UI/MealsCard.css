@@ -1,0 +1,23 @@
+.meals-container {
+  text-align: center;
+  background-color: white;
+  width: 40%;
+  margin: 10px auto; 
+  border: 1px solid black; 
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 25px;
+}
+
+.desc {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.price {
+  font-size: 20px;
+  color: brown;
+}

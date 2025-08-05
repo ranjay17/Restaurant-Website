@@ -1,5 +1,6 @@
 import React from "react";
 import "./RestaurantSummary.css";
+import Meals from "../Meals/Meals";
 
 const RestaurantSummary = () => {
   return (
@@ -13,6 +14,7 @@ const RestaurantSummary = () => {
           experienced chefs!
         </p>
       </div>
+      <Meals />
     </>
   );
 };
