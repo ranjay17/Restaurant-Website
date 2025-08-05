@@ -1,11 +1,19 @@
 .meals-container {
+  display: flex;
+  justify-content: space-between;
   text-align: center;
   background-color: white;
   width: 40%;
-  margin: 10px auto; 
-  border: 1px solid black; 
+  margin: 10px auto;
+  border: 1px solid black;
   padding: 10px;
   border-radius: 8px;
+  flex-wrap: nowrap;
+}
+
+.mealInfo {
+  text-align: left;
+  max-width: 70%;
 }
 
 .title {
@@ -20,4 +28,9 @@
 .price {
   font-size: 20px;
   color: brown;
+}
+
+.meal-form {
+  text-align: right;
+  min-width: 30%;
 }

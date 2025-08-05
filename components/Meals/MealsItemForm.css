@@ -1,0 +1,33 @@
+.form-container {
+  display: flex;
+  align-item: center;
+  gap: 8px;
+  margin-top: 48px;
+  margin-right: 40px;
+}
+
+.amount {
+  display: flex;
+  width: 60px;
+  padding: 4px;
+  font-size: 16px;
+}
+
+button {
+  padding: 6px 12px;
+  background-color: brown;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-left: 30px;
+}
+
+.inputAmount {
+  height: 15px;
+  width: 30px;
+  margin: 5px;
+}
+.amountLabel {
+  fontweight: bold;
+  font-size: 18px;
+}

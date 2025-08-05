@@ -15,7 +15,7 @@ export const dummyMeals = [
   },
   {
     id: 3,
-    title: "Barbecue Burget",
+    title: "Barbecue Burger",
     description: "American, row, meaty",
     price: 12.99,
   },
