@@ -1,16 +1,17 @@
-import React from 'react'
-import Modal from '../UI/Modal'
+import Modal from "../UI/Modal";
 
-const Cart = () => {
-    const cartItems = [{id:'card1', name: 'Sushi', price: 35.62}]
+const Cart = (props) => {
+  const cartItems = [{ id: "card1", name: "Sushi", price: 35.62 }];
+
+  const handleCloseButton = () => {
+    props.onCloseCart();
+  };
   return (
     <Modal>
       {cartItems.map((item) => {
         return (
-          <ul>
-            <li key={item.id} className="list-item">
-              {item.name}
-            </li>
+          <ul key={item.id}>
+            <li className="list-item">{item.name}</li>
           </ul>
         );
       })}
@@ -18,12 +19,12 @@ const Cart = () => {
         <span className="total-text">Total Amount:</span>
         <span className="amount">$35.62</span>
       </div>
-      <div className='buttons'>
-        <button>Close</button>
+      <div className="buttons">
+        <button onClick={handleCloseButton}>Close</button>
         <button>Order</button>
       </div>
     </Modal>
   );
-}
+};
 
-export default Cart
+export default Cart;

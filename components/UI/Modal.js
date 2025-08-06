@@ -1,5 +1,5 @@
-import React from 'react'
-import ReactDom from 'react-dom';
+import React from "react";
+import ReactDom from "react-dom";
 import "./Modal.css";
 
 const Backdrop = () => {
@@ -27,6 +27,6 @@ const Modal = (props) => {
       )}
     </>
   );
-}
+};
 
-export default Modal
+export default Modal;

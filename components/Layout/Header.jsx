@@ -3,13 +3,16 @@ import { FaShoppingCart } from "react-icons/fa";
 import "./Header.css";
 import RestaurantSummary from "./RestaurantSummary";
 
-const Header = () => {
+const Header = (props) => {
+  const handleShowCartItems = () =>{
+    props.onShowCart()
+  }
   return (
     <>
       <div className="heading-container">
         <h1 className="heading">ReactMeals</h1>
         <div className="cart-container">
-          <button className="cart-button">
+          <button className="cart-button"  onClick={handleShowCartItems}>
             <FaShoppingCart size={18} style={{marginRight: "5px"}} />
             Your Cart
           </button>
