@@ -15,7 +15,7 @@ const Meals = () => {
             description={item.description}
             price={item.price}
           >
-            <MealsItemForm />
+            <MealsItemForm id={item.id} title={item.title} price={item.price} />
           </MealsCard>
         );
       })}

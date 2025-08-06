@@ -1,12 +1,18 @@
 import React from "react";
+import { useContext } from "react";
+import CartContext from "../../store.js/cart-context";
 import { FaShoppingCart } from "react-icons/fa";
 import "./Header.css";
 import RestaurantSummary from "./RestaurantSummary";
 
 const Header = (props) => {
+  const cartCtx = useContext(CartContext);
   const handleShowCartItems = () =>{
     props.onShowCart()
   }
+  const numberOfCartItems = cartCtx.items.reduce((currNumber, item)=>{
+    return currNumber + item.amount
+  },0)
   return (
     <>
       <div className="heading-container">
@@ -14,7 +20,8 @@ const Header = (props) => {
         <div className="cart-container">
           <button className="cart-button"  onClick={handleShowCartItems}>
             <FaShoppingCart size={18} style={{marginRight: "5px"}} />
-            Your Cart
+            <span>Your Cart</span>
+            <span className="quantity">{numberOfCartItems}</span>
           </button>
         </div>
       </div>

@@ -21,7 +21,7 @@
 .cart-button {
   height: 40px;
   width: 190px;
-  background-color: brown;
+  background-color: black;
   color: white;
   font-size: 18px;
   border-radius: 20px;
@@ -37,5 +37,12 @@
   display: block;
   margin: 0;
   padding: 0;
+}
+
+.quantity{
+  background-color: brown;
+  border-radius: 25px;
+  padding: 8px;
+  margin: 10px;
 }
 
