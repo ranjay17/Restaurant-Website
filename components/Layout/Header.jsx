@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-import CartContext from "../../store.js/cart-context";
+import CartContext from "../../store/cart-context";
 import { FaShoppingCart } from "react-icons/fa";
 import "./Header.css";
 import RestaurantSummary from "./RestaurantSummary";

@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Cart from "./components/cart/Cart";
 import Header from "./components/Layout/Header";
-import CartProvider from "./store.js/CartProvider";
+import CartProvider from "./store/CartProvider";
 
 function App() {
   const [showCart, setShowCart] = useState(false);

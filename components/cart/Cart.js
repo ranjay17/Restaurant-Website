@@ -1,24 +1,46 @@
 import Modal from "../UI/Modal";
+import CartContext from "../../store/cart-context";
+import { useContext } from "react";
+import "./Cart.css";
 
 const Cart = (props) => {
-  const cartItems = [{ id: "card1", name: "Sushi", price: 35.62 }];
+  const cartCtx = useContext(CartContext);
 
   const handleCloseButton = () => {
     props.onCloseCart();
   };
+
+  const handleAddItem = (item) => {
+    cartCtx.addItem({ ...item, amount: 1 }); 
+  };
+
+  const handleRemoveItem = (id) => {
+    cartCtx.removeItem(id); 
+  };
+
   return (
     <Modal>
-      {cartItems.map((item) => {
-        return (
-          <ul key={item.id}>
-            <li className="list-item">{item.name}</li>
-          </ul>
-        );
-      })}
+      <ul>
+        {cartCtx.items.map((item) => (
+          <li key={item.id} className="list-item">
+            <div>
+              <h2 className="title">{item.title}</h2>
+              <div className="summary">
+                <span className="price">${item.price.toFixed(2)}</span>
+                <span className="amount">x {item.amount}</span>
+                <button onClick={() => handleRemoveItem(item.id)} className="remove">-</button>
+                <button onClick={() => handleAddItem(item)} className="addItem">+</button>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
+
       <div className="cartDetails">
         <span className="total-text">Total Amount:</span>
-        <span className="amount">$35.62</span>
+        <span className="amount">${cartCtx.totalAmount.toFixed(2)}</span>
       </div>
+
       <div className="buttons">
         <button onClick={handleCloseButton}>Close</button>
         <button>Order</button>

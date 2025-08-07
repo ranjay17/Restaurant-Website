@@ -1,5 +1,5 @@
 import React, { useRef, useContext } from "react";
-import CartContext from "../../store.js/cart-context";
+import CartContext from "../../store/cart-context";
 import './MealsItemForm.css';
 
 const MealsItemForm = (props) => {
